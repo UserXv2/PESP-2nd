@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PESP Homepage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PESP Homepage</title>
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header>
 
-    </header>
+  <!-- Header & Menu Button -->
+  <header>
+    <!-- Left button: Homepage -->
+    <a href="index.html">🏠 Home</a>
 
-    <main>
-        Hello
-    </main>
+    <!-- Center button: Current page -->
+    <div class="center">
+      <button disabled>Current Page</button>
+    </div>
 
-    <footer>
+    <!-- Right button: Menu toggle -->
+    <button id="menuBtn">☰ Menu</button>
+  </header>
 
-    </footer>
+   <!-- Sidebar menu -->
+    <div class="sidebar" id="sidebar">
+        <!-- Close button inside menu -->
+        <button id="closeBtn">✖</button>
+
+        <h2>Navigation</h2>
+        <div class="sidebar-buttons">
+            <a href="index.html"><button class="sidebar-btn" id="btnHome">Home</button></a>
+            <a href="settings.html"><button class="sidebar-btn" id="btnSettings">Settings</button></a>
+            <a href="tips.html"><button class="sidebar-btn" id="btnTips">Tips</button></a>
+            <a href="feedback.html"><button class="sidebar-btn" id="btnFeedback">Feedback</button></a>
+            <a href="help.html"><button class="sidebar-btn" id="btnHelp">Help</button></a>
+            <a href="calendar.html"><button class="sidebar-btn" id="btnCalendar">Calendar</button></a>
+        </div>
+    </div>
+
+  <!-- Page content -->
+  <main style="padding:20px;">
+    <h1>Welcome to PESP Homepage</h1>
+    <p>Hello!</p>
+  </main>
+
+  <footer>
+    <!-- Optional footer content -->
+  </footer>
+
+  <!-- External JS -->
+  <script src="./scripts/main.js"></script>
 </body>
 </html>

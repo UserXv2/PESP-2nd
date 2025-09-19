@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+  <!-- Header & Sidebar from template -->
+  <header>
+    <a href="index.html">🏠 Home</a>
+    <div class="center">
+      <button disabled>Settings</button>
+    </div>
+    <button id="menuBtn">☰ Menu</button>
+  </header>
+
+   <!-- Sidebar menu -->
+    <div class="sidebar" id="sidebar">
+        <!-- Close button inside menu -->
+        <button id="closeBtn">✖</button>
+
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="template.html">Template</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </div>
+
+  <!-- Settings content -->
+  <main style="padding:20px;">
+    <h2>Menu Button Settings</h2>
+    <label>
+      <input type="checkbox" id="menuToggleSetting"> Enable menu toggle button
+    </label>
+  </main>
+
+  <!-- JS -->
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/settings.js"></script>
+</body>
+</html>
