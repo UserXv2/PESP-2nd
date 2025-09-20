@@ -106,3 +106,94 @@ a > .sidebar-btn {
   text-decoration: none;
   color: inherit;
 }
+
+
+/* Main container as flex */
+main {
+  display: flex;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Task bar on the left */
+.task-bar {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 5px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+/* Main content on the right */
+.main-content {
+  flex-grow: 1; /* take remaining space */
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Category group styling */
+.category-group {
+  margin-bottom: 20px;
+}
+
+.category-group h4 {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* Task buttons inside categories */
+.task-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+.task-btn:hover {
+  background: #d0d0d0;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+form input, form select, form textarea, form button {
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #45a049;
+}

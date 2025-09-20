@@ -42,3 +42,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+// Load tasks from localStorage
+function loadTasks() {
+  const taskContainer = document.getElementById("taskContainer");
+  taskContainer.innerHTML = ""; // clear before render
+
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  // Group tasks by category
+  let categories = {};
+  tasks.forEach(task => {
+    if (!categories[task.category_type]) {
+      categories[task.category_type] = [];
+    }
+    categories[task.category_type].push(task);
+  });
+
+  // Render categories and tasks
+  for (let category in categories) {
+    const categoryDiv = document.createElement("div");
+    categoryDiv.classList.add("category-group");
+
+    const title = document.createElement("h4");
+    title.textContent = category;
+    categoryDiv.appendChild(title);
+
+    categories[category].forEach(task => {
+      const link = document.createElement("a");
+      link.href = `task${task.id}.html`;
+
+      const btn = document.createElement("button");
+      btn.classList.add("task-btn");
+      btn.textContent = task.task_name;
+
+      link.appendChild(btn);
+      categoryDiv.appendChild(link);
+    });
+
+    taskContainer.appendChild(categoryDiv);
+  }
+}
+
+// Run when page loads
+document.addEventListener("DOMContentLoaded", loadTasks);

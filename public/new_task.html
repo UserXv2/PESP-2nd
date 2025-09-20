@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Task</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">🏠 Home</a>
+    <div class="center"><button disabled>New Task</button></div>
+    <button id="menuBtn">☰ Menu</button>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <button id="closeBtn">✖</button>
+    <h2>Navigation</h2>
+    <div class="sidebar-buttons">
+      <a href="index.html"><button class="sidebar-btn">Home</button></a>
+      <a href="settings.html"><button class="sidebar-btn">Settings</button></a>
+      <a href="tips.html"><button class="sidebar-btn">Tips</button></a>
+      <a href="feedback.html"><button class="sidebar-btn">Feedback</button></a>
+      <a href="help.html"><button class="sidebar-btn">Help</button></a>
+      <a href="calendar.html"><button class="sidebar-btn">Calendar</button></a>
+    </div>
+  </div>
+
+  <main class="main-container">
+    <div class="main-content">
+      <h1>Create a New Task</h1>
+      <form id="taskForm">
+        <label>Task Name:
+          <input type="text" id="task_name" required>
+        </label>
+
+        <label>Start Date:
+          <input type="date" id="start_date" required>
+        </label>
+
+        <label>Start Time:
+          <input type="time" id="start_time" required>
+        </label>
+
+        <label>End Date:
+          <input type="date" id="end_date" required>
+        </label>
+
+        <label>End Time:
+          <input type="time" id="end_time" required>
+        </label>
+
+        <label>Category Type:
+          <select id="category_type" required>
+            <option value="School">School</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+
+        <label>Description:
+          <textarea id="description" rows="3"></textarea>
+        </label>
+
+        <label>Recurring:
+          <select id="recurring">
+            <option value="none">None</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </label>
+
+        <label>Urgency Level (1–10):
+          <input type="number" id="urgency_level" min="1" max="10" required>
+        </label>
+
+        <button type="submit">Save Task</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/taskForm.js"></script>
+</body>
+</html>
